@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	github.com/prashantv/gostub v1.1.0
-	github.com/stretchr/testify v1.7.1
+	github.com/stretchr/testify v1.9.0
 )
 
 require (
