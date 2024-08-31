@@ -48,7 +48,7 @@ pull request.
 Start by creating a new branch for your changes:
 
 ```
-cd $GOPATH/src/go.uber.org/automaxprocs
+cd $GOPATH/src/github.com/arielsrv
 git checkout master
 git fetch upstream
 git rebase upstream/master

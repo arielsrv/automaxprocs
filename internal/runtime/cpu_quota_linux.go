@@ -26,7 +26,7 @@ package runtime
 import (
 	"errors"
 
-	cg "go.uber.org/automaxprocs/internal/cgroups"
+	cg "github.com/arielsrv/internal/cgroups"
 )
 
 // CPUQuotaToGOMAXPROCS converts the CPU quota applied to the calling process

@@ -1,4 +1,4 @@
-module go.uber.org/automaxprocs
+module github.com/arielsrv
 
 go 1.23
 
