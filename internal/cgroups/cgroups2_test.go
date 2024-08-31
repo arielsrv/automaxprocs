@@ -205,7 +205,7 @@ func TestCGroupsCPUQuotaV2_OtherErrors(t *testing.T) {
 		const name = "foo"
 
 		mountPoint := t.TempDir()
-		require.NoError(t, os.WriteFile(filepath.Join(mountPoint, name), nil /* write only*/, 0222))
+		require.NoError(t, os.WriteFile(filepath.Join(mountPoint, name), nil /* write only*/, 0o222))
 
 		_, _, err := (&CGroups2{mountPoint: mountPoint, groupPath: "/", cpuMaxFile: name}).CPUQuota()
 		require.Error(t, err)

@@ -31,7 +31,6 @@ import (
 	"testing"
 
 	iruntime "github.com/arielsrv/automaxprocs/internal/runtime"
-
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -75,7 +74,7 @@ func TestLogger(t *testing.T) {
 		undo, err := Set(opt)
 		defer undo()
 		require.NoError(t, err, "Set failed")
-		assert.True(t, buf.Len() > 0, "didn't capture log output")
+		assert.Positive(t, buf.Len(), "didn't capture log output")
 	})
 }
 

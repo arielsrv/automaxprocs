@@ -39,8 +39,8 @@ func currentMaxProcs() int {
 type config struct {
 	printf         func(string, ...interface{})
 	procs          func(int, func(v float64) int) (int, iruntime.CPUQuotaStatus, error)
-	minGOMAXPROCS  int
 	roundQuotaFunc func(v float64) int
+	minGOMAXPROCS  int
 }
 
 func (c *config) log(fmt string, args ...interface{}) {

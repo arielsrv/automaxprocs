@@ -6,6 +6,7 @@ GO_FILES := $(shell \
 
 GOLINT = $(GOBIN)/golint
 STATICCHECK = $(GOBIN)/staticcheck
+GOLINT2 = $(GOBIN)/golangci-lint
 
 .PHONY: build
 build:
@@ -27,11 +28,14 @@ cover:
 $(GOLINT): tools/go.mod
 	cd tools && go install golang.org/x/lint/golint@latest
 
+$(GOLINT2): tools/go.mod
+	cd tools && go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
+
 $(STATICCHECK): tools/go.mod
 	cd tools && go install honnef.co/go/tools/cmd/staticcheck@latest
 
 .PHONY: lint
-lint: $(GOLINT) $(STATICCHECK)
+lint: $(GOLINT) $(GOLINT2) $(STATICCHECK)
 	@rm -rf lint.log
 	@echo "Checking gofmt"
 	@gofmt -d -s $(GO_FILES) 2>&1 | tee lint.log
@@ -39,8 +43,16 @@ lint: $(GOLINT) $(STATICCHECK)
 	@go vet ./... 2>&1 | tee -a lint.log
 	@echo "Checking golint"
 	@$(GOLINT) ./... | tee -a lint.log
+	@echo "Checking golint2"
+	@$(GOLINT2) ./... | tee -a lint.log
 	@echo "Checking staticcheck"
 	@$(STATICCHECK) ./... 2>&1 |  tee -a lint.log
 	@echo "Checking for license headers..."
 	@./.build/check_license.sh | tee -a lint.log
 	@[ ! -s lint.log ]
+
+.PHONY: lint2
+lint2:
+	@go run github.com/golangci/golangci-lint/cmd/golangci-lint@latest run --fix
+	@go run mvdan.cc/gofumpt@latest -w -l .
+	@go run github.com/dkorunic/betteralign/cmd/betteralign@latest -test_files -generated_files -apply ./...

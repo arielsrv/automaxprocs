@@ -25,6 +25,9 @@ package tools
 
 import (
 	// Tools we use during development.
+	_ "github.com/dkorunic/betteralign/cmd/betteralign"
+	_ "github.com/golangci/golangci-lint/cmd/golangci-lint"
 	_ "golang.org/x/lint/golint"
 	_ "honnef.co/go/tools/cmd/staticcheck"
+	_ "mvdan.cc/gofumpt"
 )

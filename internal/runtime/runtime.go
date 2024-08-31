@@ -22,15 +22,15 @@ package runtime
 
 import "math"
 
-// CPUQuotaStatus presents the status of how CPU quota is used
+// CPUQuotaStatus presents the status of how CPU quota is used.
 type CPUQuotaStatus int
 
 const (
-	// CPUQuotaUndefined is returned when CPU quota is undefined
+	// CPUQuotaUndefined is returned when CPU quota is undefined.
 	CPUQuotaUndefined CPUQuotaStatus = iota
-	// CPUQuotaUsed is returned when a valid CPU quota can be used
+	// CPUQuotaUsed is returned when a valid CPU quota can be used.
 	CPUQuotaUsed
-	// CPUQuotaMinUsed is returned when CPU quota is smaller than the min value
+	// CPUQuotaMinUsed is returned when CPU quota is smaller than the min value.
 	CPUQuotaMinUsed
 )
 
