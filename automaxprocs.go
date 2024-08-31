@@ -20,12 +20,12 @@
 
 // Package automaxprocs automatically sets GOMAXPROCS to match the Linux
 // container CPU quota, if any.
-package automaxprocs // import "github.com/arielsrv"
+package automaxprocs // import "github.com/arielsrv/automaxprocs"
 
 import (
 	"log"
 
-	"github.com/arielsrv/maxprocs"
+	"github.com/arielsrv/automaxprocs/maxprocs"
 )
 
 func init() {

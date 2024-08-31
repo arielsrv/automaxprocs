@@ -4,12 +4,12 @@ Automatically set `GOMAXPROCS` to match Linux container CPU quota.
 
 ## Installation
 
-`go get -u github.com/arielsrv`
+`go get -u github.com/arielsrv/automaxprocs`
 
 ## Quick Start
 
 ```go
-import _ "github.com/arielsrv"
+import _ "github.com/arielsrv/automaxprocs"
 
 func main() {
   // Your application logic here.
@@ -61,8 +61,8 @@ us to a high standard.
 
 Released under the [MIT License](LICENSE).
 
-[doc-img]: https://godoc.org/github.com/arielsrv?status.svg
-[doc]: https://godoc.org/github.com/arielsrv
+[doc-img]: https://godoc.org/github.com/arielsrv/automaxprocs?status.svg
+[doc]: https://godoc.org/github.com/arielsrv/automaxprocs
 [ci-img]: https://github.com/uber-go/automaxprocs/actions/workflows/go.yml/badge.svg
 [ci]: https://github.com/uber-go/automaxprocs/actions/workflows/go.yml
 [cov-img]: https://codecov.io/gh/uber-go/automaxprocs/branch/master/graph/badge.svg

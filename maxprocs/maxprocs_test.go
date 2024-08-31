@@ -30,7 +30,7 @@ import (
 	"strconv"
 	"testing"
 
-	iruntime "github.com/arielsrv/internal/runtime"
+	iruntime "github.com/arielsrv/automaxprocs/internal/runtime"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

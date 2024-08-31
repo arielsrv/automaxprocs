@@ -23,7 +23,7 @@ package maxprocs_test
 import (
 	"log"
 
-	"github.com/arielsrv/maxprocs"
+	"github.com/arielsrv/automaxprocs/maxprocs"
 )
 
 func Example() {

@@ -29,7 +29,7 @@ import (
 	"math"
 	"testing"
 
-	"github.com/arielsrv/internal/cgroups"
+	"github.com/arielsrv/automaxprocs/internal/cgroups"
 	"github.com/prashantv/gostub"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

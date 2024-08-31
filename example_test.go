@@ -21,7 +21,7 @@
 package automaxprocs_test
 
 // Importing automaxprocs automatically adjusts GOMAXPROCS.
-import _ "github.com/arielsrv"
+import _ "github.com/arielsrv/automaxprocs"
 
 // To render a whole-file example, we need a package-level declaration.
 var _ = ""

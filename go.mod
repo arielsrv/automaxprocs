@@ -1,4 +1,4 @@
-module github.com/arielsrv
+module github.com/arielsrv/automaxprocs
 
 go 1.23
 
