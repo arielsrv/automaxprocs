@@ -44,7 +44,7 @@ lint: $(GOLINT) $(GOLINT2) $(STATICCHECK)
 	@echo "Checking golint"
 	@$(GOLINT) ./... | tee -a lint.log
 	@echo "Checking golint2"
-	@$(GOLINT2) ./... | tee -a lint.log
+	@$(GOLINT2) run ./... | tee -a lint.log
 	@echo "Checking staticcheck"
 	@$(STATICCHECK) ./... 2>&1 |  tee -a lint.log
 	@echo "Checking for license headers..."
