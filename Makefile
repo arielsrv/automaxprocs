@@ -25,10 +25,10 @@ cover:
 	go tool cover -html=cover.out -o cover.html
 
 $(GOLINT): tools/go.mod
-	cd tools && go install golang.org/x/lint/golint
+	cd tools && go install golang.org/x/lint/golint@latest
 
 $(STATICCHECK): tools/go.mod
-	cd tools && go install honnef.co/go/tools/cmd/staticcheck@2023.1.2
+	cd tools && go install honnef.co/go/tools/cmd/staticcheck@latest
 
 .PHONY: lint
 lint: $(GOLINT) $(STATICCHECK)
