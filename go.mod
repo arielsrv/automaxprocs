@@ -1,6 +1,6 @@
 module go.uber.org/automaxprocs
 
-go 1.20
+go 1.23
 
 require (
 	github.com/prashantv/gostub v1.1.0
